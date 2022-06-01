@@ -37,6 +37,11 @@ namespace PnP.Framework.Provisioning.Model
         public SiteFooterLayout Layout { get; set; }
 
         /// <summary>
+        /// Defines the Background emphasis of the Footer
+        /// </summary>
+        public Emphasis BackgroundEmphasis { get; set; }
+
+        /// <summary>
         /// Defines the Display Name for the footer, optional attribute
         /// </summary>
         public string DisplayName { get; set; }

@@ -337,7 +337,9 @@ namespace PnP.Framework.Provisioning.ObjectHandlers
                         w => w.FooterLayout,
                         w => w.FooterEmphasis,
                         w => w.Language);
+
                     web.FooterEnabled = template.Footer.Enabled;
+                    web.FooterEmphasis = (FooterVariantThemeType)Enum.Parse(typeof(FooterVariantThemeType), template.Footer.BackgroundEmphasis.ToString());
                     var defaultCulture = new CultureInfo((int)web.Language);
 
                     var jsonRequest = new
