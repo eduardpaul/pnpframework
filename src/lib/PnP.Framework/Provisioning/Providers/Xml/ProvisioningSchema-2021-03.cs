@@ -3880,9 +3880,12 @@ namespace PnP.Framework.Provisioning.Providers.Xml.V202103 {
         
         private string displayNameField;
         
+        private Emphasis backgroundEmphasisField;
+        
         public Footer() {
             this.removeExistingNodesField = true;
             this.layoutField = FooterLayout.Simple;
+            this.backgroundEmphasisField = Emphasis.None;
         }
         
         /// <remarks/>
@@ -3963,6 +3966,18 @@ namespace PnP.Framework.Provisioning.Providers.Xml.V202103 {
                 this.displayNameField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DefaultValueAttribute(Emphasis.None)]
+        public Emphasis BackgroundEmphasis {
+            get {
+                return this.backgroundEmphasisField;
+            }
+            set {
+                this.backgroundEmphasisField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -3976,6 +3991,25 @@ namespace PnP.Framework.Provisioning.Providers.Xml.V202103 {
         
         /// <remarks/>
         Extended,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.dev.office.com/PnP/2021/03/ProvisioningSchema")]
+    public enum Emphasis {
+        
+        /// <remarks/>
+        None,
+        
+        /// <remarks/>
+        Neutral,
+        
+        /// <remarks/>
+        Soft,
+        
+        /// <remarks/>
+        Strong,
     }
     
     /// <remarks/>
@@ -4093,25 +4127,6 @@ namespace PnP.Framework.Provisioning.Providers.Xml.V202103 {
         
         /// <remarks/>
         Cascading,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.dev.office.com/PnP/2021/03/ProvisioningSchema")]
-    public enum Emphasis {
-        
-        /// <remarks/>
-        None,
-        
-        /// <remarks/>
-        Neutral,
-        
-        /// <remarks/>
-        Soft,
-        
-        /// <remarks/>
-        Strong,
     }
     
     /// <remarks/>
